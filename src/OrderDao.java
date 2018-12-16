@@ -14,7 +14,6 @@ public class OrderDao {
 
     public static void addOrder(ArrayList<Cart> list){
         ArrayList<Document> arr = new ArrayList<>();
-        String user = list.get(0).getUser().getUsername();
         for(Cart e : list) {
             Document doc = new Document();
             doc.put("pId",e.getProduct().getId());
@@ -23,17 +22,15 @@ public class OrderDao {
             doc.put("num",e.getNum());
             arr.add(doc);
         }
-        col.insertOne(new Document("username",user).append("order",arr));
-        System.out.println("Success");
+        col.insertOne(new Document("username",LoginForm.userCurrent).append("order",arr));
     }
 
     public static ArrayList<Order> getOrder(User user){
         Document findUser = new Document("username",user.getUsername());
-        ArrayList<Cart> thisCart = new ArrayList<>();
         ArrayList<Order> thisOrder = new ArrayList<>();
         MongoCursor<Document> cursor = col.find(findUser).iterator();
         while (cursor.hasNext()){
-            thisCart.clear();
+            ArrayList<Cart> thisCart = new ArrayList<>();
             Document doc = cursor.next();
             ArrayList<Document> cart = (ArrayList<Document>) doc.get("order");
             for(int i = 0 ; i < cart.size() ; i++) {

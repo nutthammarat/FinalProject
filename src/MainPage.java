@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.util.Random;
 import javax.swing.Icon;
 import javax.swing.JOptionPane;
@@ -8,7 +9,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Jirawan
@@ -19,12 +19,19 @@ public class MainPage extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public MainPage() {
-        
+
         initComponents();
         //userIdtxt.setVisible(false);
-        ProductService.getInfo();
+        ProductService.getInfo("1");
+        lbl_Page1.setForeground(Color.blue);
+        btn_Detail7.setVisible(false);
+        btn_Detail8.setVisible(false);
+        btn_Detail9.setVisible(false);
+        btn_Detail10.setVisible(false);
+        btn_Detail11.setVisible(false);
+        btn_Detail12.setVisible(false);
         //ProfileForm.lbl_userid.setText(userIdtxt.getText());
-        
+
     }
 
     /**
@@ -58,6 +65,14 @@ public class MainPage extends javax.swing.JFrame {
         lbl_Name5 = new javax.swing.JLabel();
         lbl_Name6 = new javax.swing.JLabel();
         btn_Logout = new javax.swing.JButton();
+        lbl_Page1 = new javax.swing.JLabel();
+        lbl_Page2 = new javax.swing.JLabel();
+        btn_Detail7 = new javax.swing.JButton();
+        btn_Detail8 = new javax.swing.JButton();
+        btn_Detail9 = new javax.swing.JButton();
+        btn_Detail10 = new javax.swing.JButton();
+        btn_Detail11 = new javax.swing.JButton();
+        btn_Detail12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(746, 600));
@@ -172,7 +187,7 @@ public class MainPage extends javax.swing.JFrame {
 
         lbl_Name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(lbl_Name1);
-        lbl_Name1.setBounds(70, 110, 130, 20);
+        lbl_Name1.setBounds(70, 110, 170, 20);
 
         lbl_Name2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(lbl_Name2);
@@ -188,7 +203,7 @@ public class MainPage extends javax.swing.JFrame {
 
         lbl_Name6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(lbl_Name6);
-        lbl_Name6.setBounds(550, 300, 120, 20);
+        lbl_Name6.setBounds(550, 300, 160, 20);
 
         btn_Logout.setText("Logout");
         btn_Logout.addActionListener(new java.awt.event.ActionListener() {
@@ -199,29 +214,96 @@ public class MainPage extends javax.swing.JFrame {
         getContentPane().add(btn_Logout);
         btn_Logout.setBounds(620, 60, 100, 23);
 
+        lbl_Page1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_Page1.setText("1");
+        lbl_Page1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_Page1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lbl_Page1);
+        lbl_Page1.setBounds(60, 510, 20, 20);
+
+        lbl_Page2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_Page2.setText("2");
+        lbl_Page2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_Page2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lbl_Page2);
+        lbl_Page2.setBounds(80, 510, 20, 20);
+
+        btn_Detail7.setText("รายละเอียด1");
+        btn_Detail7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail7);
+        btn_Detail7.setBounds(60, 270, 120, 23);
+
+        btn_Detail8.setText("รายละเอียด1");
+        btn_Detail8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail8);
+        btn_Detail8.setBounds(290, 270, 120, 23);
+
+        btn_Detail9.setText("รายละเอียด1");
+        btn_Detail9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail9);
+        btn_Detail9.setBounds(530, 270, 120, 23);
+
+        btn_Detail10.setText("รายละเอียด1");
+        btn_Detail10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail10);
+        btn_Detail10.setBounds(60, 460, 120, 23);
+
+        btn_Detail11.setText("รายละเอียด1");
+        btn_Detail11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail11);
+        btn_Detail11.setBounds(300, 460, 120, 23);
+
+        btn_Detail12.setText("รายละเอียด1");
+        btn_Detail12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Detail12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Detail12);
+        btn_Detail12.setBounds(530, 460, 120, 23);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_Detail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail1ActionPerformed
-        ProductDetailService.showProductDetail();
-        ProductDetailService.getDetailProduct(ProductService.getProduct("S01"));
-        ProductDetailFrame.pIdtxt.setText("S01");
-        
-    }//GEN-LAST:event_btn_Detail1ActionPerformed
 
     private void btn_Detail2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail2ActionPerformed
         ProductDetailService.showProductDetail();
         ProductDetailService.getDetailProduct(ProductService.getProduct("S02"));
         ProductDetailFrame.pIdtxt.setText("S02");
-        
+
     }//GEN-LAST:event_btn_Detail2ActionPerformed
 
     private void btn_Detail3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail3ActionPerformed
-       ProductDetailService.showProductDetail();
-       ProductDetailService.getDetailProduct(ProductService.getProduct("S03"));
-       ProductDetailFrame.pIdtxt.setText("S03");
-       
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S03"));
+        ProductDetailFrame.pIdtxt.setText("S03");
+
     }//GEN-LAST:event_btn_Detail3ActionPerformed
 
     private void btn_Detail4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail4ActionPerformed
@@ -245,8 +327,8 @@ public class MainPage extends javax.swing.JFrame {
     private void btn_CartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CartActionPerformed
         CartService.showCartPage();
         CartService.showList();
-        
-        
+
+
     }//GEN-LAST:event_btn_CartActionPerformed
 
     private void lbl_Pic1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lbl_Pic1AncestorAdded
@@ -267,6 +349,85 @@ public class MainPage extends javax.swing.JFrame {
         RegisterService.goTOLogin();
     }//GEN-LAST:event_btn_LogoutActionPerformed
 
+    private void lbl_Page1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_Page1MouseClicked
+        ProductService.getInfo("1");
+        lbl_Page1.setForeground(Color.blue);
+        lbl_Page2.setForeground(Color.black);
+        btn_Detail1.setVisible(true);
+        btn_Detail2.setVisible(true);
+        btn_Detail3.setVisible(true);
+        btn_Detail4.setVisible(true);
+        btn_Detail5.setVisible(true);
+        btn_Detail6.setVisible(true);
+        btn_Detail7.setVisible(false);
+        btn_Detail8.setVisible(false);
+        btn_Detail9.setVisible(false);
+        btn_Detail10.setVisible(false);
+        btn_Detail11.setVisible(false);
+        btn_Detail12.setVisible(false);
+    }//GEN-LAST:event_lbl_Page1MouseClicked
+
+    private void lbl_Page2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_Page2MouseClicked
+        ProductService.getInfo("2");
+        lbl_Page2.setForeground(Color.blue);
+        lbl_Page1.setForeground(Color.black);
+        btn_Detail1.setVisible(false);
+        btn_Detail2.setVisible(false);
+        btn_Detail3.setVisible(false);
+        btn_Detail4.setVisible(false);
+        btn_Detail5.setVisible(false);
+        btn_Detail6.setVisible(false);
+        btn_Detail7.setVisible(true);
+        btn_Detail8.setVisible(true);
+        btn_Detail9.setVisible(true);
+        btn_Detail10.setVisible(true);
+        btn_Detail11.setVisible(true);
+        btn_Detail12.setVisible(true);
+    }//GEN-LAST:event_lbl_Page2MouseClicked
+
+    private void btn_Detail7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail7ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S07"));
+        ProductDetailFrame.pIdtxt.setText("S07");
+    }//GEN-LAST:event_btn_Detail7ActionPerformed
+
+    private void btn_Detail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail1ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S01"));
+        ProductDetailFrame.pIdtxt.setText("S01");
+
+    }//GEN-LAST:event_btn_Detail1ActionPerformed
+
+    private void btn_Detail8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail8ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S08"));
+        ProductDetailFrame.pIdtxt.setText("S08");
+    }//GEN-LAST:event_btn_Detail8ActionPerformed
+
+    private void btn_Detail9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail9ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S09"));
+        ProductDetailFrame.pIdtxt.setText("S09");
+    }//GEN-LAST:event_btn_Detail9ActionPerformed
+
+    private void btn_Detail10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail10ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S10"));
+        ProductDetailFrame.pIdtxt.setText("S10");
+    }//GEN-LAST:event_btn_Detail10ActionPerformed
+
+    private void btn_Detail11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail11ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S11"));
+        ProductDetailFrame.pIdtxt.setText("S11");
+    }//GEN-LAST:event_btn_Detail11ActionPerformed
+
+    private void btn_Detail12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Detail12ActionPerformed
+        ProductDetailService.showProductDetail();
+        ProductDetailService.getDetailProduct(ProductService.getProduct("S12"));
+        ProductDetailFrame.pIdtxt.setText("S12");
+    }//GEN-LAST:event_btn_Detail12ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -274,11 +435,17 @@ public class MainPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Cart;
     private javax.swing.JButton btn_Detail1;
+    private javax.swing.JButton btn_Detail10;
+    private javax.swing.JButton btn_Detail11;
+    private javax.swing.JButton btn_Detail12;
     private javax.swing.JButton btn_Detail2;
     private javax.swing.JButton btn_Detail3;
     private javax.swing.JButton btn_Detail4;
     private javax.swing.JButton btn_Detail5;
     private javax.swing.JButton btn_Detail6;
+    private javax.swing.JButton btn_Detail7;
+    private javax.swing.JButton btn_Detail8;
+    private javax.swing.JButton btn_Detail9;
     public static javax.swing.JButton btn_Logout;
     private javax.swing.JButton btn_Profile;
     private javax.swing.JLabel jLabel8;
@@ -288,6 +455,8 @@ public class MainPage extends javax.swing.JFrame {
     public static javax.swing.JLabel lbl_Name4;
     public static javax.swing.JLabel lbl_Name5;
     public static javax.swing.JLabel lbl_Name6;
+    public static javax.swing.JLabel lbl_Page1;
+    public static javax.swing.JLabel lbl_Page2;
     public static javax.swing.JLabel lbl_Pic1;
     public static javax.swing.JLabel lbl_Pic2;
     public static javax.swing.JLabel lbl_Pic3;

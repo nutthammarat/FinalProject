@@ -127,7 +127,10 @@ public class CartPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ProfileActionPerformed
 
     private void btn_confirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_confirmorderActionPerformed
-       OrderService.getOrder(UserService.getUser(LoginForm.userCurrent));
+        CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
+        //OrderService.getAllOrder();
+        this.hide();
+//        OrderService.showOrderPage();
     }//GEN-LAST:event_btn_confirmorderActionPerformed
 
     /**

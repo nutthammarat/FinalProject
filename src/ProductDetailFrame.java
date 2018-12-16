@@ -52,7 +52,7 @@ public class ProductDetailFrame extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(622, 479));
         getContentPane().setLayout(null);
         getContentPane().add(pic1);
-        pic1.setBounds(60, 90, 180, 150);
+        pic1.setBounds(40, 90, 200, 150);
 
         backbtn.setText("Back");
         backbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class ProductDetailFrame extends javax.swing.JFrame {
         nameproduct.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         nameproduct.setText("Name");
         getContentPane().add(nameproduct);
-        nameproduct.setBounds(50, 270, 210, 30);
+        nameproduct.setBounds(20, 270, 260, 30);
 
         sizetxt.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         sizetxt.setText("...");

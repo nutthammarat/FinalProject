@@ -15,7 +15,7 @@ public class OrderPage extends javax.swing.JFrame {
      */
     public OrderPage() {
         initComponents();
-        OrderService.getOrder(UserService.getUser(LoginForm.userCurrent));
+        OrderService.getAllOrder();
     }
 
     /**

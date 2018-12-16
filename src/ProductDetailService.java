@@ -11,12 +11,19 @@ public class ProductDetailService {
     static String brown = "น้ำตาล";
     static String pink = "ชมพู";
     static String black = "ดำ";
-    static String S01 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\chelsea-shirt.png";
-    static String S02 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\sweatershirt.png";
-    static String S03 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\pajamas.png";
-    static String S04 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\hawaii-shirt.png";
-    static String S05 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\supernova.png";
-    static String S06 = "E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\adidas_zne.png";
+    static String yellow = "เหลือง";
+    static String S01 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\chelsea-shirt.png";
+    static String S02 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\sweatershirt.png";
+    static String S03 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\pajamas.png";
+    static String S04 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\hawaii-shirt.png";
+    static String S05 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\supernova.png";
+    static String S06 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\adidas_zne.png";
+    static String S07 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\SportShirt.png";
+    static String S08 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\Fighing-Sport.png";
+    static String S09 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\Manu_Shirt.png";
+    static String S10 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\Filas.png";
+    static String S11 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\kimonos.png";
+    static String S12 = "E:\\CloseFinish-master\\src\\org\\me\\myimageapp\\resources\\Cody.png";
 
     public static void showProductDetail() {
         ProductDetailFrame productdetail = new ProductDetailFrame();
@@ -39,6 +46,9 @@ public class ProductDetailService {
         } else if (color.equals("pink")) {
             return pink;
         }
+        else if (color.equals("yellow")) {
+            return yellow;
+        }
         return black;
     }
 
@@ -54,10 +64,7 @@ public class ProductDetailService {
         
 
     }
-
-   
-
-    public static void getPicture(Product pid) {
+     public static void getPicture(Product pid) {
         if (pid.getId().equals("S01")) {
             ImageIcon icon = new ImageIcon(S01);
             ProductDetailFrame.pic1.setIcon(icon);
@@ -82,6 +89,30 @@ public class ProductDetailService {
             ImageIcon icon = new ImageIcon(S06);
             ProductDetailFrame.pic1.setIcon(icon);
             ProductDetailFrame.pIdtxt.setText("S06");
+        }else if (pid.getId().equals("S07")) {
+            ImageIcon icon = new ImageIcon("S07");
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S07");
+        }else if (pid.getId().equals("S08")) {
+            ImageIcon icon = new ImageIcon(S08);
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S08");
+        }else if (pid.getId().equals("S09")) {
+            ImageIcon icon = new ImageIcon(S09);
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S09");
+        }else if (pid.getId().equals("S10")) {
+            ImageIcon icon = new ImageIcon(S10);
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S10");
+        }else if (pid.getId().equals("S11")) {
+            ImageIcon icon = new ImageIcon(S11);
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S11");
+        }else if (pid.getId().equals("S12")) {
+            ImageIcon icon = new ImageIcon(S12);
+            ProductDetailFrame.pic1.setIcon(icon);
+            ProductDetailFrame.pIdtxt.setText("S12");
         }
     }
 
