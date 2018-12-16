@@ -30,6 +30,7 @@ public class CartService {
         ArrayList<Cart> list = CartService.getAllProduct(user);
         
         if (list.isEmpty()) {
+            CartPage.btn_Confirmorder.setEnabled(false);
             JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า");
             //CartPage.list1.setVisible(false);
         }else {

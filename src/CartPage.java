@@ -36,7 +36,7 @@ public class CartPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        btn_confirmorder = new javax.swing.JButton();
+        btn_Confirmorder = new javax.swing.JButton();
         btn_Back = new javax.swing.JButton();
         btn_Profile = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -60,14 +60,14 @@ public class CartPage extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(70, 220, 0, 0);
 
-        btn_confirmorder.setText("ยืนยันการสั่งสินค้า");
-        btn_confirmorder.addActionListener(new java.awt.event.ActionListener() {
+        btn_Confirmorder.setText("ยืนยันการสั่งสินค้า");
+        btn_Confirmorder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_confirmorderActionPerformed(evt);
+                btn_ConfirmorderActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_confirmorder);
-        btn_confirmorder.setBounds(440, 330, 130, 23);
+        getContentPane().add(btn_Confirmorder);
+        btn_Confirmorder.setBounds(440, 330, 130, 23);
 
         btn_Back.setText("Back");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +127,7 @@ public class CartPage extends javax.swing.JFrame {
         ProfileService.showProfileForm();
     }//GEN-LAST:event_btn_ProfileActionPerformed
 
-    private void btn_confirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_confirmorderActionPerformed
+    private void btn_ConfirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ConfirmorderActionPerformed
 //        CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
         try {
             OrderService.addToOrder();
@@ -139,7 +139,7 @@ public class CartPage extends javax.swing.JFrame {
         }
     
     
-    }//GEN-LAST:event_btn_confirmorderActionPerformed
+    }//GEN-LAST:event_btn_ConfirmorderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,9 +148,9 @@ public class CartPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Back;
+    public static javax.swing.JButton btn_Confirmorder;
     private javax.swing.JButton btn_Profile;
     private javax.swing.JButton btn_Remove;
-    private javax.swing.JButton btn_confirmorder;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
