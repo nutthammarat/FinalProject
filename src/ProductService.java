@@ -24,60 +24,47 @@ public abstract class ProductService {
             if (page.equals("1")) {
                 if (i == 1) {
                     MainPage.lbl_Name1.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S01);
-                    MainPage.lbl_Pic1.setIcon(icon);
-
+                    MainPage.lbl_Pic1.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 2) {
                     MainPage.lbl_Name2.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S02);
-                    MainPage.lbl_Pic2.setIcon(icon);
+                    MainPage.lbl_Pic2.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 3) {
                     MainPage.lbl_Name3.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S03);
-                    MainPage.lbl_Pic3.setIcon(icon);
+                    MainPage.lbl_Pic3.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 4) {
                     MainPage.lbl_Name4.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S04);
-                    MainPage.lbl_Pic4.setIcon(icon);
+                    MainPage.lbl_Pic4.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 5) {
                     MainPage.lbl_Name5.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S05);
-                    MainPage.lbl_Pic5.setIcon(icon);
+                    MainPage.lbl_Pic5.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 6) {
                     MainPage.lbl_Name6.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S06);
-                    MainPage.lbl_Pic6.setIcon(icon);
-                    
+                    MainPage.lbl_Pic6.setIcon(new ImageIcon(e.getPicture()));
+
                 }
-               
-            } else if(page.equals("2")){
+
+            } else if (page.equals("2")) {
                 if (i == 7) {
                     MainPage.lbl_Name1.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S07);
-                    MainPage.lbl_Pic1.setIcon(icon);
+                    MainPage.lbl_Pic1.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 8) {
                     MainPage.lbl_Name2.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S08);
-                    MainPage.lbl_Pic2.setIcon(icon);
+                    MainPage.lbl_Pic2.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 9) {
                     MainPage.lbl_Name3.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S09);
-                    MainPage.lbl_Pic3.setIcon(icon);
+                    MainPage.lbl_Pic3.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 10) {
                     MainPage.lbl_Name4.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S10);
-                    MainPage.lbl_Pic4.setIcon(icon);
+                    MainPage.lbl_Pic4.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 11) {
                     MainPage.lbl_Name5.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S11);
-                    MainPage.lbl_Pic5.setIcon(icon);
+                    MainPage.lbl_Pic5.setIcon(new ImageIcon(e.getPicture()));
                 } else if (i == 12) {
                     MainPage.lbl_Name6.setText(product1.getName().toUpperCase());
-                    ImageIcon icon = new ImageIcon(ProductDetailService.S12);
-                    MainPage.lbl_Pic6.setIcon(icon);
-                    
+                    MainPage.lbl_Pic6.setIcon(new ImageIcon(e.getPicture()));
+
                 }
-                
+
             }
             i++;
         }
@@ -112,5 +99,4 @@ public abstract class ProductService {
 //            MainPage.btn_Detail12.setVisible(true);
 //        }
 //    }
-
 }

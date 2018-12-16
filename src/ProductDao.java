@@ -16,7 +16,7 @@ public class ProductDao {
         ArrayList<Product> products = new ArrayList<>();
         while (cursor.hasNext()) {
             Document product = cursor.next();
-            products.add(new Product(product.get("_id").toString(),product.get("name").toString(),(int)product.get("price")
+            products.add(new Product(product.get("_id").toString(),product.get("picture").toString(),product.get("name").toString(),(int)product.get("price")
                     ,product.get("size").toString(),product.get("color").toString(),product.get("brand").toString()));
         }
         return products;
@@ -28,7 +28,7 @@ public class ProductDao {
         Product thisProduct = null;
         if(cursor.hasNext()){
             Document product = cursor.next();
-            thisProduct = new Product(product.get("_id").toString(),product.get("name").toString(),(int)product.get("price")
+            thisProduct = new Product(product.get("_id").toString(),product.get("picture").toString(),product.get("name").toString(),(int)product.get("price")
                     ,product.get("size").toString(),product.get("color").toString(),product.get("brand").toString());
         }
         return thisProduct;

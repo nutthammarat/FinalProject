@@ -9,8 +9,9 @@ public class Product {
     private byte image;
     //private int num;
 
-    Product(String id,String name, int price, String size, String color, String brand){
+    Product(String id,String picture,String name, int price, String size, String color, String brand){
         this.id = id;
+        this.picture = picture;
         this.name = name;
         this.price = price;
         this.size = size;

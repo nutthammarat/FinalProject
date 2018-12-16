@@ -241,7 +241,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail7);
-        btn_Detail7.setBounds(60, 270, 120, 23);
+        btn_Detail7.setBounds(60, 250, 120, 23);
 
         btn_Detail8.setText("รายละเอียด1");
         btn_Detail8.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +250,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail8);
-        btn_Detail8.setBounds(290, 270, 120, 23);
+        btn_Detail8.setBounds(290, 250, 120, 23);
 
         btn_Detail9.setText("รายละเอียด1");
         btn_Detail9.addActionListener(new java.awt.event.ActionListener() {
@@ -259,7 +259,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail9);
-        btn_Detail9.setBounds(530, 270, 120, 23);
+        btn_Detail9.setBounds(530, 250, 120, 23);
 
         btn_Detail10.setText("รายละเอียด1");
         btn_Detail10.addActionListener(new java.awt.event.ActionListener() {
@@ -268,7 +268,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail10);
-        btn_Detail10.setBounds(60, 460, 120, 23);
+        btn_Detail10.setBounds(60, 440, 120, 23);
 
         btn_Detail11.setText("รายละเอียด1");
         btn_Detail11.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +277,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail11);
-        btn_Detail11.setBounds(300, 460, 120, 23);
+        btn_Detail11.setBounds(300, 440, 120, 23);
 
         btn_Detail12.setText("รายละเอียด1");
         btn_Detail12.addActionListener(new java.awt.event.ActionListener() {
@@ -286,7 +286,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Detail12);
-        btn_Detail12.setBounds(530, 460, 120, 23);
+        btn_Detail12.setBounds(530, 440, 120, 23);
 
         pack();
         setLocationRelativeTo(null);

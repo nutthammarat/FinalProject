@@ -1,10 +1,28 @@
+
 import java.util.*;
 
 public class Tests {
-//    public static void main(String[] args) {
-////        CartService.addCartToOrder(UserService.getUser("admin"));
-//        
-//        //OrderService.getOrder(UserService.getUser("admin"));
+
+    public static void main(String[] args) {
+            String product = ProductService.getProduct("S02").getPicture();
+            System.out.println(product.toString());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        CartService.addCartToOrder(UserService.getUser("admin"));
+        //OrderService.getOrder(UserService.getUser("admin"));
 //    
 //
 //
@@ -67,6 +85,6 @@ public class Tests {
 //    
 //    
 //    
-//}
-    
+    }
+
 }
