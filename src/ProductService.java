@@ -21,45 +21,47 @@ public abstract class ProductService {
         int i = 1;
         for (Product e : product) {
             Product product1 = ProductService.getProduct(e.getId());
+            System.out.println(e.getId());
             if (page.equals("1")) {
                 if (i == 1) {
                     MainPage.lbl_Name1.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic1.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 2) {
+                } else if (e.getId().equals("S02")) {
                     MainPage.lbl_Name2.setText(product1.getName().toUpperCase());
+                   // System.out.println(e.getId());
                     MainPage.lbl_Pic2.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 3) {
+                } else if (e.getId().equals("S03")) {
                     MainPage.lbl_Name3.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic3.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 4) {
+                } else if (e.getId().equals("S04")) {
                     MainPage.lbl_Name4.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic4.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 5) {
+                } else if (e.getId().equals("S05")) {
                     MainPage.lbl_Name5.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic5.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 6) {
+                } else if (e.getId().equals("S06")) {
                     MainPage.lbl_Name6.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic6.setIcon(new ImageIcon(e.getPicture()));
 
                 }
 
             } else if (page.equals("2")) {
-                if (i == 7) {
+                if (e.getId().equals("S07")) {
                     MainPage.lbl_Name1.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic1.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 8) {
+                } else if (e.getId().equals("S08")) {
                     MainPage.lbl_Name2.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic2.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 9) {
+                } else if (e.getId().equals("S09")) {
                     MainPage.lbl_Name3.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic3.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 10) {
+                } else if (e.getId().equals("S10")) {
                     MainPage.lbl_Name4.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic4.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 11) {
+                } else if (e.getId().equals("S11")) {
                     MainPage.lbl_Name5.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic5.setIcon(new ImageIcon(e.getPicture()));
-                } else if (i == 12) {
+                } else if (e.getId().equals("S12")) {
                     MainPage.lbl_Name6.setText(product1.getName().toUpperCase());
                     MainPage.lbl_Pic6.setIcon(new ImageIcon(e.getPicture()));
 

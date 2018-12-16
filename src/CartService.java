@@ -20,6 +20,7 @@ public class CartService {
 
     public static void addCartToOrder(User users) {
         OrderDao.addOrder(getAllProduct(users));
+        JOptionPane.showMessageDialog(null, "เพิ่มสินค้าสำเร็จ");
         deleteCart(users);
     }
 
@@ -45,12 +46,13 @@ public class CartService {
     public static boolean deleteProduct(String id) {
         User user = UserService.getUser(LoginForm.userCurrent);
         CartDao.deleteProduct(user, ProductService.getProduct(id));
-        
+        showList();
         return true;
     }
     public static void showCartPage() {
         CartPage cart = new CartPage();
         cart.setVisible(true);
+        CartService.showList();
     }
 
     public static int calculatePrice() {

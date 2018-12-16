@@ -46,7 +46,7 @@ public class ProductDetailService {
         ProductDetailFrame.nameproduct.setText(pid.getName().toUpperCase());
         ProductDetailFrame.bandtxt.setText(pid.getBrand());
         ProductDetailFrame.colortxt.setText(setcolor);
-        ProductDetailFrame.sizetxt.setText(pid.getColor());
+        ProductDetailFrame.sizetxt.setText(pid.getSize());
         ProductDetailFrame.pricetxt.setText("" + pid.getPrice());
 
     }

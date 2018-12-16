@@ -183,7 +183,7 @@ public class MainPage extends javax.swing.JFrame {
 
         lbl_Name3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(lbl_Name3);
-        lbl_Name3.setBounds(520, 110, 130, 20);
+        lbl_Name3.setBounds(520, 110, 200, 20);
 
         lbl_Name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         getContentPane().add(lbl_Name1);
@@ -326,7 +326,7 @@ public class MainPage extends javax.swing.JFrame {
 
     private void btn_CartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CartActionPerformed
         CartService.showCartPage();
-        CartService.showList();
+       // CartService.showList();
 
 
     }//GEN-LAST:event_btn_CartActionPerformed

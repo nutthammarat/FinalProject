@@ -56,7 +56,7 @@ public class OrderService {
             index++;
             OrderPage.jList1.setModel(listModel);
             OrderPage.txt_totalprice.setText("" + calculateTotalPrice());
-            
+
         }
         System.out.println("Open Success");
     }
@@ -68,7 +68,7 @@ public class OrderService {
         int sum = 0;
         for (Order e : order) {
             for (Cart ee : e.getOrder()) {
-                sum = sum + (ee.getProduct().getPrice()*ee.getNum());
+                sum = sum + (ee.getProduct().getPrice() * ee.getNum());
             }
         }
         return sum;
@@ -81,8 +81,7 @@ public class OrderService {
 
     public static void addToOrder() {
         try {
-            CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
-            JOptionPane.showMessageDialog(null, "เพิ่มสินค้าสำเร็จ");
+           CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
         } catch (Exception exception) {
             JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า กรุณาเพิ่มสินค้าในตระกร้าก่อนกดยืนยันสั่งซื้อสินค้า");
         }

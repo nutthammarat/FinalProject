@@ -19,7 +19,7 @@ public class CartPage extends javax.swing.JFrame {
      */
     public CartPage() {
         initComponents();
-        CartService.showList();
+        
        
         
     }
