@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,7 +19,7 @@ public class CartPage extends javax.swing.JFrame {
      */
     public CartPage() {
         initComponents();
-       // CartService.showList();
+        CartService.showList();
        
         
     }
@@ -127,10 +128,17 @@ public class CartPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ProfileActionPerformed
 
     private void btn_confirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_confirmorderActionPerformed
-        CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
+//        CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
+        try {
+            OrderService.addToOrder();
         //OrderService.getAllOrder();
         this.hide();
 //        OrderService.showOrderPage();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "กรุณาเลือกสินค้า");
+        }
+    
+    
     }//GEN-LAST:event_btn_confirmorderActionPerformed
 
     /**

@@ -44,7 +44,7 @@ public class CartService {
     public static boolean deleteProduct(String id) {
         User user = UserService.getUser(LoginForm.userCurrent);
         CartDao.deleteProduct(user, ProductService.getProduct(id));
-        showList();
+        
         return true;
     }
     public static void showCartPage() {

@@ -18,7 +18,7 @@ public class OrderService {
 
     public static void addOrder(ArrayList<Cart> list) {
         OrderDao.addOrder(list);
-        
+
     }
 
 //    public static void getOrder(User user) {
@@ -41,24 +41,24 @@ public class OrderService {
 //        }
 ////        return arr;
 //    }
-    public static ArrayList<Order> getOrder(User user) {
-        return OrderDao.getOrder(user);
-    }
-
-    public static void getAllOrder() {
+//    public static ArrayList<Order> getOrder(User user) {
+//        return OrderDao.getOrder(user);
+//    }
+    public static void getOrder() {
         User user = UserService.getUser(LoginForm.userCurrent);
         ArrayList<Order> order = OrderDao.getOrder(user);
         DefaultListModel listModel = new DefaultListModel();
         int index = 1;
         for (Order e : order) {
             for (Cart ee : e.getOrder()) {
-                listModel.addElement(" Order No. " + index + " " + ee.getProduct().getName() + " " + ee.getProduct().getPrice() + " " + ee.getNum());
+                listModel.addElement(" Order No. " + index + " " + ee.getProduct().getName() + " " + ee.getProduct().getPrice() + "    จำนวน   " + ee.getNum());
             }
             index++;
             OrderPage.jList1.setModel(listModel);
-            OrderPage.txt_totalprice.setText(""+calculateTotalPrice());
-            System.out.println("Open Success");
+            OrderPage.txt_totalprice.setText("" + calculateTotalPrice());
+            
         }
+        System.out.println("Open Success");
     }
 
     public static int calculateTotalPrice() {
@@ -68,7 +68,7 @@ public class OrderService {
         int sum = 0;
         for (Order e : order) {
             for (Cart ee : e.getOrder()) {
-                sum += ee.getProduct().getPrice();
+                sum = sum + (ee.getProduct().getPrice()*ee.getNum());
             }
         }
         return sum;
@@ -79,10 +79,10 @@ public class OrderService {
         orderpage.setVisible(true);
     }
 
-    public static void checkCartNull() {
+    public static void addToOrder() {
         try {
             CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
-            OrderService.showOrderPage();
+            JOptionPane.showMessageDialog(null, "เพิ่มสินค้าสำเร็จ");
         } catch (Exception exception) {
             JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า กรุณาเพิ่มสินค้าในตระกร้าก่อนกดยืนยันสั่งซื้อสินค้า");
         }
